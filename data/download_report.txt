@@ -1,0 +1,74 @@
+FloodScope AI — Mock Data Download Report
+==================================================
+Generated: 2026-11-14T21:58:07.989722 UTC
+
+50 synthetic SAR images + 50 labels generated
+Generated as mock data for prototype testing
+
+Dataset: Sen1Floods11 (synthetic substitute)
+SAR type: Sentinel-1 GRD (simulated)
+Resolution: 512×512 pixels at ~10 m/pixel
+Bands: VV, VH (float32, dB scale)
+
+Split assignments:
+  train      : 35 chips
+  validation : 10 chips
+  test       : 5 chips
+
+Chip IDs and splits:
+
+[TRAIN]
+  USA_191161
+  Mekong_391704
+  Bolivia_343962
+  Paraguay_329258
+  Canada_131244
+  Mekong_719176
+  Canada_246316
+  Paraguay_267414
+  Bolivia_809570
+  Paraguay_197251
+  Somalia_207175
+  Ghana_900581
+  Bolivia_770487
+  Bolivia_539898
+  USA_391369
+  Pakistan_731262
+  Somalia_872246
+  India_629903
+  Ghana_106814
+  Mekong_688508
+  Nigeria_542417
+  Ghana_133326
+  Nigeria_356787
+  India_543143
+  Mekong_388389
+  Pakistan_671858
+  Somalia_835392
+  Ghana_850800
+  USA_877572
+  USA_717889
+  Canada_895667
+  India_876646
+  Nigeria_308496
+  Nigeria_948749
+  Canada_452944
+
+[VALIDATION]
+  Canada_781453
+  Pakistan_571029
+  India_216739
+  Bolivia_832052
+  India_331148
+  Somalia_944962
+  Nigeria_325772
+  Ghana_334053
+  Pakistan_456778
+  USA_127824
+
+[TEST]
+  Paraguay_671412
+  Paraguay_207473
+  Mekong_263032
+  Somalia_198246
+  Pakistan_126225

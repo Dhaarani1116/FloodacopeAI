@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #030712;
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Cesium canvas fills its container */
+.cesium-container {
+  width: 100%;
+  height: 100%;
+}
+
+.cesium-credit-logoContainer {
+  display: none !important;
+}
+
+.cesium-widget-credits {
+  display: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Pulsing marker animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+.pulse-ring {
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
+/* Glass panel */
+.glass {
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+/* Number counter animation */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.count-animate {
+  animation: count-up 0.6s ease-out forwards;
+}
+
+/* Neon glow text */
+.text-glow-blue {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+}
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* Gradient borders */
+.border-gradient-blue {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  background-image: linear-gradient(#0a0f1e, #0a0f1e),
+    linear-gradient(135deg, #3b82f6, #06b6d4);
+  background-origin: border-box;
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+.skeleton {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    90deg,
+    #0a0f1e 25%,
+    #1e293b 50%,
+    #0a0f1e 75%
+  );
+  background-size: 1000px 100%;
+}
+
+/* SVG world map fallback */
+.world-map-fallback {
+  fill: #1e293b;
+  stroke: #3b82f6;
+  stroke-width: 0.5;
+}
+
+/* Cesium toolbar overrides */
+.cesium-toolbar-button,
+.cesium-navigationHelpButton-wrapper {
+  display: none !important;
+}

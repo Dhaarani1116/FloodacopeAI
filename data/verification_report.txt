@@ -1,0 +1,59 @@
+FloodScope AI — Dataset Verification Report
+======================================================================
+
+Total SAR chips found: 50
+All have labels      : True
+Errors               : 0
+
+chip_id                        bands      shape has_label        split
+----------------------------------------------------------------------
+Bolivia_343962                     2    512x512      True        train
+Bolivia_539898                     2    512x512      True        train
+Bolivia_770487                     2    512x512      True        train
+Bolivia_809570                     2    512x512      True        train
+Bolivia_832052                     2    512x512      True   validation
+Canada_131244                      2    512x512      True        train
+Canada_246316                      2    512x512      True        train
+Canada_452944                      2    512x512      True        train
+Canada_781453                      2    512x512      True   validation
+Canada_895667                      2    512x512      True        train
+Ghana_106814                       2    512x512      True        train
+Ghana_133326                       2    512x512      True        train
+Ghana_334053                       2    512x512      True   validation
+Ghana_850800                       2    512x512      True        train
+Ghana_900581                       2    512x512      True        train
+India_216739                       2    512x512      True   validation
+India_331148                       2    512x512      True   validation
+India_543143                       2    512x512      True        train
+India_629903                       2    512x512      True        train
+India_876646                       2    512x512      True        train
+Mekong_263032                      2    512x512      True         test
+Mekong_388389                      2    512x512      True        train
+Mekong_391704                      2    512x512      True        train
+Mekong_688508                      2    512x512      True        train
+Mekong_719176                      2    512x512      True        train
+Nigeria_308496                     2    512x512      True        train
+Nigeria_325772                     2    512x512      True   validation
+Nigeria_356787                     2    512x512      True        train
+Nigeria_542417                     2    512x512      True        train
+Nigeria_948749                     2    512x512      True        train
+Pakistan_126225                    2    512x512      True         test
+Pakistan_456778                    2    512x512      True   validation
+Pakistan_571029                    2    512x512      True   validation
+Pakistan_671858                    2    512x512      True        train
+Pakistan_731262                    2    512x512      True        train
+Paraguay_197251                    2    512x512      True        train
+Paraguay_207473                    2    512x512      True         test
+Paraguay_267414                    2    512x512      True        train
+Paraguay_329258                    2    512x512      True        train
+Paraguay_671412                    2    512x512      True         test
+Somalia_198246                     2    512x512      True         test
+Somalia_207175                     2    512x512      True        train
+Somalia_835392                     2    512x512      True        train
+Somalia_872246                     2    512x512      True        train
+Somalia_944962                     2    512x512      True   validation
+USA_127824                         2    512x512      True   validation
+USA_191161                         2    512x512      True        train
+USA_391369                         2    512x512      True        train
+USA_717889                         2    512x512      True        train
+USA_877572                         2    512x512      True        train

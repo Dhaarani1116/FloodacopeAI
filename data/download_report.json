@@ -1,0 +1,35 @@
+{
+  "total_chips_downloaded": 0,
+  "total_size_mb": 0.0,
+  "split_counts": {
+    "train": 10,
+    "validation": 0,
+    "test": 0
+  },
+  "matched_pairs": [],
+  "failed_sar": [
+    "Bolivia_00000",
+    "Canada_00000",
+    "Ghana_00000",
+    "India_00000",
+    "Mekong_00000",
+    "Nigeria_00000",
+    "Pakistan_00000",
+    "Paraguay_00000",
+    "USA_00000",
+    "Somalia_00000"
+  ],
+  "failed_labels": [
+    "Bolivia_00000",
+    "Canada_00000",
+    "Ghana_00000",
+    "India_00000",
+    "Mekong_00000",
+    "Nigeria_00000",
+    "Pakistan_00000",
+    "Paraguay_00000",
+    "USA_00000",
+    "Somalia_00000"
+  ],
+  "timestamp": "2026-11-14T21:42:46Z"
+}
