@@ -57,11 +57,28 @@ backend/uploads/*
 backend/results/*.geojson
 !backend/results/.gitkeep
 
-# Large GeoTIFF satellite imagery (Reproducible via download_real_sen1floods11.py)
+# Large GeoTIFF satellite imagery (Excluded all except 8 demonstration region pairs)
 data/sentinel1_real/*.tif
 data/sentinel1_real/*.tiff
+!data/sentinel1_real/India_285297_S1Hand.tif
+!data/sentinel1_real/Pakistan_909806_S1Hand.tif
+!data/sentinel1_real/Spain_5923267_S1Hand.tif
+!data/sentinel1_real/Mekong_221789_S1Hand.tif
+!data/sentinel1_real/USA_994009_S1Hand.tif
+!data/sentinel1_real/Ghana_103272_S1Hand.tif
+!data/sentinel1_real/Paraguay_721886_S1Hand.tif
+!data/sentinel1_real/Bolivia_103757_S1Hand.tif
+
 data/labels_real/*.tif
 data/labels_real/*.tiff
+!data/labels_real/India_285297_LabelHand.tif
+!data/labels_real/Pakistan_909806_LabelHand.tif
+!data/labels_real/Spain_5923267_LabelHand.tif
+!data/labels_real/Mekong_221789_LabelHand.tif
+!data/labels_real/USA_994009_LabelHand.tif
+!data/labels_real/Ghana_103272_LabelHand.tif
+!data/labels_real/Paraguay_721886_LabelHand.tif
+!data/labels_real/Bolivia_103757_LabelHand.tif
 
 # Large PyTorch Model Checkpoint (Exceeds GitHub standard 100MB file limit)
 backend/models/*.pth
