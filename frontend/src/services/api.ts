@@ -81,8 +81,10 @@ export interface HealthResponse {
 
 // ─── Axios instance ───────────────────────────────────────────────────────────
 
+const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+
 const api = axios.create({
-  baseURL: '',
+  baseURL: API_BASE_URL,
   timeout: 60_000,
   headers: { 'Content-Type': 'application/json' },
 });
