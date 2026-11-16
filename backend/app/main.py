@@ -23,9 +23,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 REPO_DIR = BASE_DIR.parent
 UPLOAD_DIR = BASE_DIR / "uploads"
 RESULTS_DIR = BASE_DIR / "results"
-# Look for real data first, fallback to demo/synthetic
-SENTINEL_DIR = (REPO_DIR / "data" / "sentinel1_real") if (REPO_DIR / "data" / "sentinel1_real").exists() else (REPO_DIR / "data" / "sentinel1")
-LABELS_DIR = (REPO_DIR / "data" / "labels_real") if (REPO_DIR / "data" / "labels_real").exists() else (REPO_DIR / "data" / "labels")
+
+# Look for real data in either REPO_DIR (standard) or BASE_DIR (if deployed with root backend)
+def _resolve_data_dir(folder_name: str) -> Path:
+    candidates = [
+        REPO_DIR / "data" / folder_name,
+        BASE_DIR / "data" / folder_name,
+        Path.cwd() / "data" / folder_name,
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return REPO_DIR / "data" / folder_name
+
+SENTINEL_DIR = _resolve_data_dir("sentinel1_real")
+LABELS_DIR = _resolve_data_dir("labels_real")
 MODEL_PATH = str(BASE_DIR / "models" / "unet_resnet34.pth")
 
 UPLOAD_DIR.mkdir(exist_ok=True)
@@ -341,10 +353,14 @@ def _run_analysis(job_id: str, filename: str, job_store: dict) -> None:
 @app.get("/health")
 def health():
     model = _get_model()
+    available_sentinel_files = [f.name for f in SENTINEL_DIR.glob("*.tif")] if SENTINEL_DIR.exists() else []
     return {
         "status": "ok",
         "model_loaded": model is not None,
         "sample_count": len(SAMPLE_REGIONS),
+        "sentinel_dir": str(SENTINEL_DIR),
+        "sentinel_dir_exists": SENTINEL_DIR.exists(),
+        "available_files_count": len(available_sentinel_files),
     }
 
 
